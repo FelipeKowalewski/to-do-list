@@ -20,7 +20,29 @@ API RESTful para gerenciamento de tarefas, incluindo:
 - Pytz --> Datas e horários
 - SQLite --> Banco de dados
 
-## Instalação
+
+## Endpoints
+
+Autenticação
+| Método | Rota           | Descrição           |
+| ------ | -------------- | ------------------- |
+| POST   | /auth/login    | Login via JWT       |
+| POST   | /auth/register | Registro de usuário |
+
+Tarefas
+| Método | Rota        | Descrição                        |
+| ------ | ----------- | -------------------------------- |
+| GET    | /tasks      | Listar tarefas                   |
+| POST   | /tasks      | Criar tarefa (status = Pendente) |
+| PUT    | /tasks/{id} | Atualizar tarefa                 |
+| DELETE | /tasks/{id} | Excluir tarefa                   |
+
+
+## Instalação e configuração
+
+Importante:
+- definir uma 'secret_key' no arquivo .env.example
+- renomear arquivo para .env
 
 ```bash
 # criar ambiente virtual
@@ -37,20 +59,3 @@ uvicorn app.main:app --reload
 # Servidor disponível em: http://127.0.0.1:8000
 
 # Swagger(descrição e teste dos endpoints): http://localhost:8000/docs
-
-
-# Endpoints
-
-Autenticação
-| Método | Rota           | Descrição           |
-| ------ | -------------- | ------------------- |
-| POST   | /auth/login    | Login via JWT       |
-| POST   | /auth/register | Registro de usuário |
-
-Tarefas
-| Método | Rota        | Descrição                        |
-| ------ | ----------- | -------------------------------- |
-| GET    | /tasks      | Listar tarefas                   |
-| POST   | /tasks      | Criar tarefa (status = Pendente) |
-| PUT    | /tasks/{id} | Atualizar tarefa                 |
-| DELETE | /tasks/{id} | Excluir tarefa                   |
