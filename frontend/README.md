@@ -25,6 +25,13 @@ Interface web para o gerenciamento de tarefas:
 - React Hooks --> Gerenciamento de estado e ciclo de vida
 - Node.js --> Ambiente
 
+## Páginas
+| Página   | Rota        | Função                              |
+| -------- | ----------- | ----------------------------------- |
+| Login    | `/login`    | Autenticação do usuário             |
+| Cadastro | `/register` | Criação de conta                    |
+| Tasks    | `/tasks`    | Listagem e gerenciamento de tarefas |
+
 ## Instalação
 
 ```bash
@@ -37,12 +44,3 @@ yarn install
 npm run dev
 
 # Servidor disponível em: http://localhost:5173
-
-
-# Páginas
-| Página   | Rota        | Função                              |
-| -------- | ----------- | ----------------------------------- |
-| Login    | `/login`    | Autenticação do usuário             |
-| Cadastro | `/register` | Criação de conta                    |
-| Tasks    | `/tasks`    | Listagem e gerenciamento de tarefas |
-
