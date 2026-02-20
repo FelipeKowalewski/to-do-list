@@ -1,3 +1,5 @@
+### Português
+
 ## 📝 Desafio AFL — Gerenciador de Tarefas
 
 Este repositório contém a implementação de um sistema de gerenciamento de tarefas, desenvolvido como parte de um desafio técnico.
@@ -44,10 +46,15 @@ Criar uma aplicação fullstack que permita:
 | Tecnologia        | Por que foi escolhida                                  |
 | ----------------- | ------------------------------------------------------ |
 | **Node.js**       | Necessário para ferramentas modernas de frontend       |
+| ----------------- | ------------------------------------------------------ |
 | **Vite**          | Extremamente rápido e simples de configurar            |
+| ----------------- | ------------------------------------------------------ |
 | **React**         | Componentização, estado previsível e amplo ecossistema |
+| ----------------- | ------------------------------------------------------ |
 | **TypeScript**    | Menos erros e melhor manutenção                        |
+| ----------------- | ------------------------------------------------------ |
 | **Tailwind CSS**  | Estilo rápido, consistente e sem CSS complexo          |
+| ----------------- | ------------------------------------------------------ |
 | **Axios / Fetch** | Tratamento JSON e integração natural com APIs REST     |
 
 
@@ -98,3 +105,111 @@ Ele pode ser facilmente expandido:
 - Filtros de tarefas
 - Refresh token
 - Deploy em produção
+
+
+### English
+
+## 📝 AFL Challenge — Task Management System
+
+This repository contains the implementation of a task management system developed as part of a technical challenge. The project is divided into backend (API) and frontend (web interface), following best practices for separation of concerns and modern architecture.
+
+## 🎯 Project Objective
+
+Build a fullstack application that allows users to:
+
+- Create tasks
+
+- List tasks
+
+- Update tasks
+
+- Delete tasks
+
+- Authenticate users (signup/login)
+
+- Associate tasks with authenticated users
+
+
+## Backend
+
+| Technology     | Why it was chosen                                                               |
+| -------------- | ------------------------------------------------------------------------------- |
+| **Python**     | Challenge requirement                                                           |
+| -------------- | ------------------------------------------------------------------------------- |
+| **FastAPI**    | High performance, strong typing, automatic validation and Swagger documentation |
+| -------------- | ------------------------------------------------------------------------------- |
+| **SQLAlchemy** | Clear and controlled database abstraction compatible with SQLite                |
+| -------------- | ------------------------------------------------------------------------------- |
+| **SQLite**     | Challenge requirement                                                           |
+| -------------- | ------------------------------------------------------------------------------- |
+| **Pydantic**   | Ensures API contracts between backend and frontend (FastAPI standard)           |
+| -------------- | ------------------------------------------------------------------------------- |
+| **JWT**        | Modern and stateless authentication approach                                    |
+| -------------- | ------------------------------------------------------------------------------- |
+| **Uvicorn**    | Lightweight and optimized ASGI server for FastAPI                               |
+
+
+## Frontend
+
+| Technology        | Why it was chosen                                                   |
+| ----------------- | ------------------------------------------------------------------- |
+| **Node.js**       | Required for modern frontend tooling                                |
+| ----------------- | ------------------------------------------------------------------- |
+| **Vite**          | Extremely fast and simple build tool                                |
+| ----------------- | ------------------------------------------------------------------- |
+| **React**         | Component-based architecture, predictable state and large ecosystem |
+| ----------------- | ------------------------------------------------------------------- |
+| **TypeScript**    | Better maintainability and fewer runtime errors                     |
+| ----------------- | ------------------------------------------------------------------- |
+| **Tailwind CSS**  | Fast, consistent styling without complex CSS                        |
+| ----------------- | ------------------------------------------------------------------- |
+| **Axios / Fetch** | Simplified JSON handling and seamless REST API integration          |
+
+
+## 📌 Business Rules
+👤 User
+
+- A user can sign up with email and password
+- Login returns a JWT token
+- The token is required to access protected routes
+
+📝 Tasks
+
+- Each task belongs to a single authenticated user
+- The creation date is automatically generated by the backend
+- Only the task owner can update or delete it
+- Every task is created with the status PENDING
+- The status cannot be changed during creation
+
+Allowed status values:
+
+- pending → Pending
+- in_progress → In Progress
+- done → Completed
+
+🔐 Authentication Notes
+
+- The frontend stores the JWT token and automatically attaches it to protected requests
+- If the token is invalid or expired, the user is redirected to the login page
+
+## 🚀 How to Run the Project (Backend + Frontend)
+
+- To run the full application, both the backend and the frontend must be running.
+- After starting both services, you can test all features through the frontend interface.
+- Detailed setup instructions are available in the README files inside the backend and frontend folders.
+
+
+## ✅ Final Considerations
+
+This project was developed with focus on:
+- Clear business rules
+- Clean and readable code
+- Proper separation between frontend and backend
+- Use of modern and widely adopted technologies
+
+It can be easily extended with features such as:
+- Pagination
+- Task filtering
+- Refresh tokens
+- Production deployment
+
